@@ -1,7 +1,3 @@
-/**normalize
- * Created by diman on 24.04.17.
- */
-
 
 const express = require('express'),
     exec = require('child_process').exec,
@@ -17,7 +13,6 @@ const express = require('express'),
     host = "127.0.0.1",
     url = `http://${host}:${port}`;
 
-let isFirstStart = true;
 
 //use Server-Sent Events with express server
 app.use(events);
@@ -25,16 +20,12 @@ app.use(events);
 //serve static (css, js, images)
 app.use(express.static(path.join(__dirname, './../build')));
 
-//redirect every request to index.html, so we can use browserRouter (instead of hashrouter)
+//redirect every request to index.html, so we can use browserRouter (instead of hashRouter)
 app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, './../build/index.html'));
 });
-//redirect every request to index.html, so we can use browserRouter (instead of hashrouter)
 
-
-fs.unlink(path.join(__dirname, "./../build/js/bundle.js"), err=>{});
-fs.unlink(path.join(__dirname, "./../build/css/bundle.css"), err=>{});
-
+let isFirstStart = true;
 compiler.watch({
     aggregateTimeout: 300,
     poll: true,
