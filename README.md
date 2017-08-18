@@ -22,10 +22,16 @@ As I'm a linux user, this project is best works with linux, but it can work in w
 ### Project Structure
 ```
 app
--webpack.node.server.js - file with node.js server
+-webpack.node.server.js #file with node.js server
 build #directory with compiled project
 npm #directory with build scripts (npm natives & webpack config)
+-webpack.node.server.config.js #webpack config
 src #directory with project
+-api #all requests to backend api
+-modules #react components
+-redux #redux logic
+-app.js #entry point
+-router.js #router config
 ```
 
 ### Installing

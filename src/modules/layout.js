@@ -1,7 +1,6 @@
 
 import React from 'react';
 import {Link, Switch, Route, Redirect} from 'react-router-dom';
-
 import Main from "./main";
 import Profile from "./profile";
 import Forbidden from "./forbidden";

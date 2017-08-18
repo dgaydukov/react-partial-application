@@ -1,7 +1,5 @@
 
 import { combineReducers } from 'redux';
-
-// Reducers
 import profileReducer from './reducers/profile-reducer';
 
 // Combine Reducers
