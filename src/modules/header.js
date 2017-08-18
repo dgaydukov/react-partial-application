@@ -1,9 +1,10 @@
 'use strict';
 
 import React from 'react';
-import {login, getCatalog} from "../api/webapi";
+import { connect } from 'react-redux';
+import {login} from "../api/webapi";
 
-export default class Header extends React.Component{
+class Header extends React.Component{
     constructor(props){
         super(props);
     }
@@ -13,12 +14,19 @@ export default class Header extends React.Component{
     }
 
     render(){
-        console.log(this.props)
         return(
             <div>
                 <div>auth</div>
-                <button onClick={::this.login}>login</button>
+                {!this.props.profile.id && <button onClick={::this.login}>login</button>}
             </div>
         )
     }
 }
+
+
+export default connect(store => {
+    return{
+        profile: store.profileState.profile,
+        catalog: store.catalogState.catalog,
+    }
+})(Header);

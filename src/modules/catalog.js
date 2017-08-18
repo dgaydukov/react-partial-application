@@ -1,8 +1,9 @@
 'use strict';
 
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default class Catalog extends React.Component{
+class Catalog extends React.Component{
     constructor(props){
         super(props);
     }
@@ -22,3 +23,11 @@ export default class Catalog extends React.Component{
         )
     }
 }
+
+
+export default connect(store => {
+    return{
+        profile: store.profileState.profile,
+        catalog: store.catalogState.catalog,
+    }
+})(Catalog);

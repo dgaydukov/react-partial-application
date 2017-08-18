@@ -4,18 +4,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from "./redux/store";
-import {ConnectedHeader, ConnectedCatalog} from "./router";
+import Header from "./modules/header";
+import Catalog from "./modules/catalog";
 
 window.onload = () => {
     ReactDOM.render(
         <Provider store={store}>
-            <ConnectedHeader />
+            <Header />
         </Provider>,
         document.getElementById('header')
     );
     ReactDOM.render(
         <Provider store={store}>
-            <ConnectedCatalog />
+            <Catalog />
         </Provider>,
         document.getElementById('catalog')
     );

@@ -8,6 +8,23 @@ The answer is Redux.
 
 So these project is simple example how apply react on 2 blocks in server-render site and connect them together.
 
+The key logic is here
+```javascript
+    ReactDOM.render(
+        <Provider store={store}>
+            <Header />
+        </Provider>,
+        document.getElementById('header')
+    );
+    ReactDOM.render(
+        <Provider store={store}>
+            <Catalog />
+        </Provider>,
+        document.getElementById('catalog')
+    );
+```
+We bind to two different div's in html layout, but because of common state, they can communicate easily with each other
+
 ## Getting Started
 
 In order to start, you should clone this repo. You also need node & npm infrastructure installed.
