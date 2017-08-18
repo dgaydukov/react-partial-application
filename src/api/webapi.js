@@ -1,12 +1,23 @@
+'use strict';
 
 import store from "../redux/store";
-import {getProfileSuccess} from "../redux/action-creators";
+import {getProfileSuccess, getCatalogSuccess} from "../redux/action-creators";
 
 /**
  imitate auth
  */
-export function load(){
+export function login(){
     setTimeout(()=>{
         store.dispatch(getProfileSuccess({id: 1}));
-    }, 3000)
+        getCatalog();
+    }, 100)
+}
+
+/**
+ imitate catalog request
+ */
+export function getCatalog(){
+    setTimeout(()=>{
+        store.dispatch(getCatalogSuccess(["offer-3", "offer-4", "offer-5"]));
+    }, 100)
 }

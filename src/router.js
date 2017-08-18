@@ -1,20 +1,16 @@
 'use strict';
 
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Layout from "./modules/layout"
+import Header from "./modules/header"
+import Catalog from "./modules/catalog"
 
-const Router = (props) => {
-    return (
-        <BrowserRouter>
-            <Layout {...props}/>
-        </BrowserRouter>
-    )
-};
+
 const mapStateToProps = function(store) {
     return {
         profile: store.profileState.profile,
+        catalog: store.catalogState.catalog,
     };
 };
-export const ConnectedRouter = connect(mapStateToProps)(Router);
+export const ConnectedHeader = connect(mapStateToProps)(Header);
+export const ConnectedCatalog = connect(mapStateToProps)(Catalog);

@@ -1,19 +1,23 @@
-
+'use strict';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from "./redux/store";
-import {ConnectedRouter} from "./router";
-import {load} from "./api/webapi";
+import {ConnectedHeader, ConnectedCatalog} from "./router";
 
 window.onload = () => {
-    load();
     ReactDOM.render(
         <Provider store={store}>
-            <ConnectedRouter />
+            <ConnectedHeader />
         </Provider>,
-        document.getElementById('main')
+        document.getElementById('header')
+    );
+    ReactDOM.render(
+        <Provider store={store}>
+            <ConnectedCatalog />
+        </Provider>,
+        document.getElementById('catalog')
     );
 }
 

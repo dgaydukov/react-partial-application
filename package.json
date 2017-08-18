@@ -4,9 +4,7 @@
   "description": "cms for websdk mobile and desktop projects",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env PORT=3301 node app/webpack.node.server.js",
-    "mkmod": "sh npm/mkmod.sh",
-    "gitpush": "sh npm/gitpush.sh"
+    "start": "cross-env PORT=3302 node app/webpack.node.server.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +17,6 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
-    "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "underscore": "^1.8.3",
     "webpack": "^2.4.1"
