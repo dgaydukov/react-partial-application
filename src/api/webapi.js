@@ -1,5 +1,10 @@
 'use strict';
 
+/*
+ * API functions for getting data
+ */
+
+
 import store from "../redux/store";
 import {getProfileSuccess, getCatalogSuccess} from "../redux/action-creators";
 

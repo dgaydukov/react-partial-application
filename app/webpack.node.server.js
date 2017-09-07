@@ -1,3 +1,8 @@
+'use strict'
+
+/*
+ * node.js web server for running app locally
+ */
 
 const express = require('express'),
     exec = require('child_process').exec,

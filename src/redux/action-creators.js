@@ -1,5 +1,10 @@
 'use strict';
 
+/*
+ * Redux actions functions
+ */
+
+
 import * as types from "./action-types";
 
 export function getProfileSuccess(data) {

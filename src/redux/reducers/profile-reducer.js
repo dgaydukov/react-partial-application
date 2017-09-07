@@ -1,5 +1,10 @@
 'use strict';
 
+/*
+ * Redux profile reducer
+ */
+
+
 import * as types from '../action-types';
 
 const initialState = {

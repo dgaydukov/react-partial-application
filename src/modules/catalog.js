@@ -1,5 +1,10 @@
 'use strict';
 
+/*
+ * React catalog component
+ */
+
+
 import React from 'react';
 import { connect } from 'react-redux';
 

@@ -1,5 +1,9 @@
 'use strict';
 
+/*
+ * Redux catalog reducer
+ */
+
 import * as types from '../action-types';
 
 const initialState = {
