@@ -8,21 +8,20 @@ The answer is Redux.
 
 So these project is simple example how apply react on 2 blocks in server-render site and connect them together.
 
-The key logic is here
+The key logic is this function render, that checks if id exists, and bind React app
 ```javascript
-    ReactDOM.render(
-        <Provider store={store}>
-            <Header />
-        </Provider>,
-        document.getElementById('header')
-    );
-    ReactDOM.render(
-        <Provider store={store}>
-            <Catalog />
-        </Provider>,
-        document.getElementById('catalog')
-    );
+const render = (id, Component) => {
+    if(document.getElementById(id)){
+        ReactDOM.render(
+            <Provider store={store}>
+                <Component />
+            </Provider>,
+            document.getElementById(id)
+        );
+    }
+}
 ```
+So, you can have multiple html pages, or even generate them on the fly in your backend server
 We bind to two different div's in html layout, but because of common state, they can communicate easily with each other
 
 ## Getting Started

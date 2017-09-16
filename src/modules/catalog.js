@@ -30,9 +30,9 @@ class Catalog extends React.Component{
 }
 
 
-export default connect(store => {
-    return{
+export default connect(store => (
+    {
         profile: store.profileState.profile,
         catalog: store.catalogState.catalog,
     }
-})(Catalog);
+))(Catalog);
